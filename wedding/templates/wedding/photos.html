@@ -1,0 +1,73 @@
+{%extends 'wedding/base.html'%}     <!--TO CONNECT TO THE PARENT HTML FILE--->
+
+<!--TITLE FOR THIS PAGE--->
+{% block title %} Photos {% endblock %}
+
+
+<!--THE CONTENT OF THIS PAGE--->
+{% block content %}
+
+   
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="5"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="6"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="7"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="8"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="9"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../../static/images/love.jpg" alt="Los Angeles" class="d-block" style="width:780px; height: 580px;">
+    </div>
+    <div class="carousel-item">
+      <img src="../../static/images/love1.jpg" alt="Chicago" class="d-block" style="width:780px; height: 580px;">
+    </div>
+    <div class="carousel-item">
+      <img src="../../static/images/love2.jpg" alt="New York" class="d-block" style="width:780px; height: 580px;">
+    </div>
+    <div class="carousel-item">
+      <img src="../../static/images/love3.jpg" alt="New York" class="d-block" style="width:780px; height: 580px;">
+    </div>
+    <div class="carousel-item">
+      <img src="../../static/images/love4.jpg" alt="New York" class="d-block" style="width:780px; height: 580px;">
+    </div>
+    <div class="carousel-item">
+      <img src="../../static/images/love5.jpg" alt="New York" class="d-block" style="width:780px; height: 580px;">
+    </div>
+    <div class="carousel-item">
+      <img src="../../static/images/love6.jpg" alt="New York" class="d-block" style="width:780px; height: 580px;">
+    </div>
+    <div class="carousel-item">
+      <img src="../../static/images/love7.jpg" alt="New York" class="d-block" style="width:780px; height: 580px;">
+    </div>
+    <div class="carousel-item">
+      <img src="../../static/images/love8.jpg" alt="New York" class="d-block" style="width:780px; height: 580px;">
+    </div>
+    <div class="carousel-item">
+      <img src="../../static/images/love9.jpg" alt="New York" class="d-block" style="width:780px; height: 580px;">
+    </div>
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+
+<audio controls autoplay loop src="../../static/audio/mad.mp3"></audio>
+{% endblock %}

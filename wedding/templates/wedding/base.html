@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/logo1.png' %}">
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    {% url 'index' as home %}
+                  <li class="nav-item">
+                    <a class="nav-link {% if request.path == home %}active{% endif %}" aria-current="page" href="{% url 'index' %}">Home</a>
+                  </li>
+                  {% url 'story' as story %}
+                  <li class="nav-item">
+                    <a class="nav-link {% if request.path == story %}active{% endif %}" href="{% url 'story' %}">Our Story</a>
+                  </li>
+                  {% url 'photos' as photos %}
+                  <li class="nav-item">
+                    <a class="nav-link {% if request.path == photos %}active{% endif %}" href="{% url 'photos' %}">Photos</a>
+                  </li>
+                  {% url 'rsvp' as rsvp %}
+                  <li class="nav-item">
+                    <a class="nav-link {% if request.path == rsvp %}active{% endif %}" href="{% url 'rsvp' %}">RSVP</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </div>
+
+    
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+</html>
