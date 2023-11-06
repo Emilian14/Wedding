@@ -8,30 +8,26 @@
 {% block content %}
 
 <style>
-    #count {
-    /* text-align: center; */
-    font-size: 30px;
-    margin-top: 1%;
-    margin-left: 20%;
-    color: white;
-    padding: 0px;
-    font-weight: bold;
-}
+    
 </style>
 
-
-
-<p id="count"></p>
-
-<div class="home">
-    <p id="name">Glory & James</p>
-    <p id="you">INVITE YOU</p>
-    <p id="to">To their Marriage</p>
-    <p id="cere">CEREMONY</p>
-    <P id="date">25.Nov.2023</P>
-</div>
-
-
+<div class="container" >
+  <div class="row">
+    <div id="count">
+    </div>
+    
+    <div id="home_body">
+      <div class="col-sm-10" style="background-color:pink;" id="home">
+        <p id="name">Glory & James</p>
+        <p id="you">INVITE YOU</p>
+        <p id="to">To their Marriage</p>
+        <p id="cere">CEREMONY</p>
+        <P id="date">25.Nov.2023</P>
+      </div>
+    </div>
+      
+  </div>
+</div> 
 
 <script>
 // Set the date we're counting down to
@@ -59,9 +55,11 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("count").innerHTML = "EXPIRED";
+    document.getElementById("count").innerHTML = "HAPPILY MARRIED";
   }
 }, 1000);
+
+
 </script>
 <audio controls autoplay loop src="../../static/audio/fire.mp3"></audio>
 {% endblock %}

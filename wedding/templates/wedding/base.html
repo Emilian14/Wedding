@@ -13,40 +13,39 @@
 </head>
 <body>
 
-    <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark" data-bs-theme="dark">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    {% url 'index' as home %}
-                  <li class="nav-item">
-                    <a class="nav-link {% if request.path == home %}active{% endif %}" aria-current="page" href="{% url 'index' %}">Home</a>
-                  </li>
-                  {% url 'story' as story %}
-                  <li class="nav-item">
-                    <a class="nav-link {% if request.path == story %}active{% endif %}" href="{% url 'story' %}">Our Story</a>
-                  </li>
-                  {% url 'photos' as photos %}
-                  <li class="nav-item">
-                    <a class="nav-link {% if request.path == photos %}active{% endif %}" href="{% url 'photos' %}">Photos</a>
-                  </li>
-                  {% url 'rsvp' as rsvp %}
-                  <li class="nav-item">
-                    <a class="nav-link {% if request.path == rsvp %}active{% endif %}" href="{% url 'rsvp' %}">RSVP</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-        </nav>
-    </div>
-
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+              {% url 'index' as home %}
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == home %}active{% endif %}" aria-current="page" href="{% url 'index' %}">Home</a>
+            </li>
+              {% url 'story' as story %}
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == story %}active{% endif %}" href="{% url 'story' %}">Our Story</a>
+            </li>
+              {% url 'photos' as photos %}
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == photos %}active{% endif %}" href="{% url 'photos' %}">Photos</a>
+            </li>
+              {% url 'rsvp' as rsvp %}
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == rsvp %}active{% endif %}" href="{% url 'rsvp' %}">RSVP</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
     
-    {% block content %}
+  {% block content %}
 
-    {% endblock %}
+  {% endblock %}
 
 </body>
 </html>
